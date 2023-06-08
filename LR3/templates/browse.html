@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Browse entries</title>
+    </head>
+<body>
+    <h1>Browse entries</h1>
+    {% if entries|length > 0 %}
+        <ul>
+        {% for entry in entries %}
+            <li><b>{{ entry[2] }}</b> ({{ entry[1] }})
+            <p>
+            {{ entry[3] }}
+            <hr>
+        {% endfor %}
+        </ul>
+    {% else %}
+        This blog is empty.
+    {% endif %}
+</body>
+</html>
